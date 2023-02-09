@@ -1,0 +1,127 @@
+.cover {
+  display: grid;
+  width: 100%;
+  max-width: 1212px;
+
+  grid-template-columns: 1fr 0.8fr;
+
+  background-color: var(--sage2);
+  box-shadow: 0px 0px 5px var(--sage8);
+
+  container-type: inline-size;
+  container-name: cover;
+  transition: all 500ms ease;
+}
+
+.cover picture {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.cover--image {
+  width: 100%;
+  height: 100%;
+}
+
+.cover--actions {
+  font-family: "Roboto", sans-serif;
+  color: var(--sage11);
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* actions */
+
+.cover--actions > h1 {
+  font-size: 3.4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage12);
+}
+
+.cover--actions > p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.seen {
+  display: flex;
+  background-color: var(--sage11);
+  color: var(--sage1);
+  font-size: thin;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  letter-spacing: 2px;
+  width: fit-content;
+  font-size: 0.8rem;
+}
+
+.cover--actions--buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background-color: var(--sage7);
+  color: var(--sage11);
+  transition: all 500ms ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.button:hover,
+.button:focus-within {
+  background-color: var(--sage7);
+  color: var(--sage12);
+}
+
+/* responsive */
+@media (max-width: 690px) {
+  .cover {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cover:has(input:checked) .bi-play-circle-fill,
+.cover:has(input:checked) .mark-as-seen
+ {
+  display: none;
+}
+
+.cover:not(:has(input:checked)) .bi-check-circle-fill,
+.cover:not(:has(input:checked)) .remove-mark,
+.cover:not(:has(input:checked)) .seen {
+  display: none;
+}
+
+.cover:has(input:checked) .bi-check-circle-fill {
+  color: var(--mint9);
+}
+
+@container cover (max-width: 690px) {
+  .cover--actions > h1 {
+    font-size: 2.5rem;
+  }
+
+  .cover--actions > p {
+    font-size: 1.2rem;
+  }
+}

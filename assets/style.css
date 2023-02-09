@@ -1,0 +1,58 @@
+:root {
+  --sage1: hsl(155, 7.0%, 8.4%);
+  --sage2: hsl(150, 7.4%, 10.6%);
+  --sage3: hsl(150, 6.7%, 13.1%);
+  --sage4: hsl(150, 6.4%, 15.3%);
+  --sage5: hsl(150, 6.1%, 17.4%);
+  --sage6: hsl(150, 5.8%, 19.9%);
+  --sage7: hsl(150, 5.5%, 23.6%);
+  --sage8: hsl(150, 5.1%, 30.6%);
+  --sage9: hsl(155, 6.0%, 42.5%);
+  --sage10: hsl(153, 4.8%, 48.2%);
+  --sage11: hsl(155, 5.0%, 61.8%);
+  --sage12: hsl(155, 6.0%, 93.0%);
+
+  --mint1: hsl(173, 50.0%, 6.6%);
+  --mint2: hsl(176, 73.0%, 7.3%);
+  --mint3: hsl(175, 79.3%, 8.9%);
+  --mint4: hsl(174, 84.8%, 10.3%);
+  --mint5: hsl(174, 90.2%, 11.9%);
+  --mint6: hsl(173, 96.0%, 13.8%);
+  --mint7: hsl(172, 100%, 16.8%);
+  --mint8: hsl(170, 100%, 21.4%);
+  --mint9: hsl(167, 65.0%, 66.0%);
+  --mint10: hsl(163, 80.0%, 77.0%);
+  --mint11: hsl(167, 70.0%, 48.0%);
+  --mint12: hsl(165, 80.0%, 94.8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--sage1);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.image--background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .2;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
